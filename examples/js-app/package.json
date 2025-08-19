@@ -1,0 +1,17 @@
+{
+  "name": "js-app",
+  "version": "1.0.0",
+  "private": "true",
+  "type": "module",
+  "scripts": {
+    "build:wit": "wkg wit fetch",
+    "build": "node --run build:wit && mkdirp dist && jco componentize -w wit -o dist/main.wasm src/main.js",
+    "wasmtime": "wasmtime serve --addr 127.0.0.1:8000 -S cli=y dist/main.wasm",
+    "pack": "npm pack",
+    "clean": "git clean -fdx -e '.env.*'"
+  },
+  "devDependencies": {
+    "@bytecodealliance/jco": "1.10.2",
+    "mkdirp": "^3.0.1"
+  }
+}
