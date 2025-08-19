@@ -15,12 +15,10 @@
     "check": "tsc"
   },
   "devDependencies": {
-    "@bytecodealliance/jco": "1.10.2",
+    "@bytecodealliance/jco": "1.13.3",
     "@rollup/plugin-commonjs": "^28.0.3",
     "@rollup/plugin-node-resolve": "^16.0.0",
     "@rollup/plugin-typescript": "^12.1.2",
-    "@types/node": "^22.14.0",
-    "@whatwg-node/server": "^0.10.3",
     "mkdirp": "^3.0.1",
     "rollup": "^4.34.8",
     "rollup-plugin-dotenv": "^0.5.1",
