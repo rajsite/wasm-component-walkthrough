@@ -37,7 +37,10 @@ module.exports = {
     {
       files: ['*.js', '*.cjs', '*.ts', '*.tsx'],
       rules: {
-        'no-console': 'off'
+        'no-console': 'off',
+        // Incorrectly triggered by blocks with `using` statements
+        // See https://github.com/ni/javascript-styleguide/issues/155#issuecomment-2952658239
+        'no-lone-blocks': 'off',
       }
     },
     {
