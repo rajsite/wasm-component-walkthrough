@@ -1,37 +1,32 @@
-# WASM Component NITech
+# WASM Component Walthrough
 
 Various WASM component examples 🎉
 
-## Dependencies
+## Setup
 
-- Node 22 LTS+
-- `wkg` from [`wasm-pkg-tools`](https://github.com/bytecodealliance/wasm-pkg-tools?tab=readme-ov-file#installation)
-- Wasmtime
+### Codespaces
 
+- Open the repo in codespaces
+  - Navigate to the repo on github
+  - Click Code, Switch to the Codespaces tab, and press `+` to create a codespace on main
+  - Codespace should load in ~30s
+  - Should see a prompt to install recommended extensions, go ahead and do that
+- In the terminal run `npm run setup-linux`
+- Close the terminal and open a new session so cli tools can be found in path
+- Verify commands installed with: `wastime --version`
 
-## Quick Start
+#### WSL or Linux locally
 
-```sh
-npm install
-```
+- Install [Node 22 LTS+](https://nodejs.org/en/download/)
+  - Recommend v22 for Linux using nvm with npm
+- Clone the repo locally
+- In the terminal run `npm run setup-linux`
+- Close the terminal and open a new session so cli tools can be found in path
+- Verify commands installed with: `wastime --version`
 
-```sh
-npm run build
-```
+## Next steps
 
-Run a specific example, such as `hono-app` via `wasmtime serve`:
-
-```
-npm run start-wasmtime -w examples/hono-app
-```
-
-## JavaScript
-
-- `js-app`: Minimal JavaScript example of an HTTP Server using the [`fetch-event`](https://github.com/bytecodealliance/ComponentizeJS?tab=readme-ov-file#using-starlingmonkeys-fetch-event) style APIs.
-
-## TypeScript
-
-The TypeScript examples are configured to use Rollup to make it easier organize apps in multiple files and leverage existing npm packages.
+Visit the
 
 ## Resources
 

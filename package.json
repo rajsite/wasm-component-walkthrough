@@ -1,15 +1,11 @@
 {
-    "name": "wasm-component-nitech",
+    "name": "wasm-component-walkthrough",
     "version": "1.0.0",
     "private": true,
     "workspaces": [
-        "examples/fetch-event-app",
-        "examples/hono-app",
-        "examples/hono-features-app",
-        "examples/hono-openapi-app",
-        "examples/hono-wasi-keyvalue-app",
-        "examples/js-app",
-        "examples/wasi-http-app"
+        "examples/step1-wasi",
+        "examples/step2-fetch",
+        "examples/step3-hono"
     ],
     "engines": {
         "node": ">=22"
