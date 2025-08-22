@@ -3,8 +3,6 @@ import { showRoutes } from 'hono/dev';
 import { logger } from 'hono/logger';
 import { proxyApp } from './proxy';
 import { jsxApp } from './jsx';
-import { githubOauthApp } from './github-oauth';
-import { oidcApp } from './oidc';
 
 export const app = new Hono();
 
@@ -18,9 +16,7 @@ app.get('/', async c => {
   return c.text(`Hello World from Hono!, result: ${result}`);
 });
 
-app.route('/github-oauth', githubOauthApp);
 app.route('/jsx', jsxApp);
-app.route('/oidc', oidcApp);
 app.route('/proxy', proxyApp);
 
 showRoutes(app, {
