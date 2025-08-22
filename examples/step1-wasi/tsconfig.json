@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "target": "es2022",
-    "lib": ["esnext", "DOM"],
+    "lib": ["es2022", "DOM", "ESNext.Disposable"],
+    "types": ["./objs/types/wit.d.ts"],
     "module": "es2022",
     "moduleResolution": "bundler",
     "verbatimModuleSyntax": true,
@@ -9,6 +10,7 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noEmit": true,
+    "incremental": true,
   },
-  "include": ["./src/", "./objs/types/"]
+  "include": ["./src/"]
 }
