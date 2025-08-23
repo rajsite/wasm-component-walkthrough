@@ -12,7 +12,7 @@ export const handle = (_request: IncomingRequest, responseOut: ResponseOutparam)
     [],
     { tag: 'get' },
     { tag: 'HTTPS' },
-    'www.google.com',
+    'meowfacts.herokuapp.com',
     '/',
     undefined
   );

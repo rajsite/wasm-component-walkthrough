@@ -34,6 +34,12 @@ declare module 'wasi:http/types@0.2.3' {
   }
 }
 
+declare module 'wasi:io/poll@0.2.3' {
+  interface Pollable extends Disposable {
+    [Symbol.dispose](): void;
+  }
+}
+
 declare module 'wasi:io/streams@0.2.3' {
   interface InputStream extends Disposable {
     [Symbol.dispose](): void;

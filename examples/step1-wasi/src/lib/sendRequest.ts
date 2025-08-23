@@ -26,10 +26,8 @@ export const sendRequest = (
 
     if (body) {
       const outgoingBody = outgoingRequest.body();
-      {
-        const bodyStream = outgoingBody.write();
-        bodyStream.blockingWriteAndFlush(encoder.encode(body));
-      }
+      const bodyStream = outgoingBody.write();
+      bodyStream.blockingWriteAndFlush(encoder.encode(body));
       OutgoingBody.finish(outgoingBody, undefined);
     }
 
@@ -43,19 +41,17 @@ export const sendRequest = (
 
     const decoder = new TextDecoder();
     const status = incomingResponse.status();
-    const responseHeaders = incomingResponse
-      .headers()
+    const incomingHeaders = incomingResponse.headers();
+    const responseHeaders = incomingHeaders
       .entries()
       .map<[string, string]>(([k, v]) => [k, decoder.decode(v)]);
 
-    let responseBody: string | undefined;
     const incomingBody = incomingResponse.consume();
-    {
-      const bodyStream = incomingBody.stream();
-      bodyStream.subscribe().block();
-      const buf = bodyStream.read(500n);
-      responseBody = buf.length > 0 ? new TextDecoder().decode(buf) : undefined;
-    }
+    const bodyStream = incomingBody.stream();
+    const pollable = bodyStream.subscribe();
+    pollable.block();
+    const buf = bodyStream.read(500n);
+    const responseBody = buf.length > 0 ? new TextDecoder().decode(buf) : undefined;
 
     return {
       body: responseBody,
