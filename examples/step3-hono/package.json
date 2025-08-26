@@ -11,7 +11,9 @@
     "build": "node --run build:wit && node --run build:wit:types && node --run build:js && node --run build:wasm",
     "start": "wasmtime serve --addr 127.0.0.1:8000 -S cli=y dist/main.wasm",
     "pack": "npm pack",
-    "check": "tsc"
+    "check": "tsc",
+    "start-node": "rollup -c rollup.config.node.js && node objs/bundled/main-node.js",
+    "benchmark-stats": "ab -n 1000 -c 10 -p benchmark/data.json -T \"application/json\" http://127.0.0.1:8000/stats"
   },
   "devDependencies": {
     "@bytecodealliance/jco": "1.13.1",
@@ -23,6 +25,7 @@
     "typescript": "^5.7.3"
   },
   "dependencies": {
+    "@hono/node-server": "^1.13.8",
     "hono": "^4.9.2"
   }
 }
