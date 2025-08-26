@@ -26,7 +26,7 @@ Use either codespaces or a local dev environment as follows:
 ### Install WASM tooling
 
 - After fetching the repository, in the terminal run `npm run setup-linux`
-- Close the terminal and **open a new terminal** so the new cli tools can be found in path
+- Close the terminal (in codespaces run `exit` in the terminal) and **open a new terminal** so the new cli tools can be found in path
 - Verify commands installed with: `wastime --version`
 
 ### Benchmarks
