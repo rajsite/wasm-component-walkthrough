@@ -29,6 +29,11 @@ Use either codespaces or a local dev environment as follows:
 - Close the terminal and **open a new terminal** so the new cli tools can be found in path
 - Verify commands installed with: `wastime --version`
 
+### Benchmarks
+
+To run benchmark scripts you also need the `ab` cli tool.
+On WSL or Linux `sudo apt-get update && sudo apt-get install apache2-utils`.
+
 ### Build
 
 - In a new terminal window `npm run build` to build all the examples.

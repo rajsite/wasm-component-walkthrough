@@ -13,7 +13,7 @@
     "pack": "npm pack",
     "check": "tsc",
     "start-node": "rollup -c rollup.config.node.js && node objs/bundled/main-node.js",
-    "benchmark-stats": "ab -n 1000 -c 10 -p benchmark/data.json -T \"application/json\" http://127.0.0.1:8000/stats"
+    "benchmark-stats": "ab -n 100 -c 10 -p benchmark/data.json -T \"application/json\" http://127.0.0.1:8000/stats"
   },
   "devDependencies": {
     "@bytecodealliance/jco": "1.13.1",
