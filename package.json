@@ -21,7 +21,7 @@
         "setup-linux:npm": "npm ci",
         "setup-linux:rust": "curl https://sh.rustup.rs -sSf | sh -s -- --profile minimal -y",
         "setup-linux:binstall": "curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash",
-        "setup-linux:binstall:packages": ". \"$HOME/.cargo/env\" && cargo binstall wasmtime-cli@36.0.2 wkg@0.11.0 wasm-tools@1.238.0 wac-cli@0.8.0 -y"
+        "setup-linux:binstall:packages": ". \"$HOME/.cargo/env\" && cargo binstall wasmtime-cli@36.0.2 wkg@0.11.0 wasm-tools@1.238.0 wac-cli@0.8.0 wit-bindgen-cli@0.45.0 -y"
     },
     "devDependencies": {
         "@ni/eslint-config-typescript": "^4.4.2"
