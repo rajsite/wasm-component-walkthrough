@@ -1,6 +1,6 @@
 # WASM Component Walthrough
 
-Various WASM component examples 🎉
+This project was put together for NI Tech 2025 to demonstrate WASM Components. If you are at NI, see the [State of WebAssembly 2025](https://emerson.sharepoint.com/:p:/s/NITechAustin/IQBbHec9sx2eSLw6KHiXuuglAZEXrn05bdh3ZebB5hV12ac?e=SIEFvt) presentation.
 
 ## Setup
 
